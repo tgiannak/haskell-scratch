@@ -76,12 +76,4 @@ docker-integer-simple: | integer-simple
 clean:
 	@rm -rf root
 
-push:
-	@docker tag -f haskell-scratch:integer-gmp fpco/haskell-scratch:integer-gmp
-	@docker push fpco/haskell-scratch:integer-gmp
-	@docker tag -f haskell-scratch:integer-simple fpco/haskell-scratch:integer-simple
-	@docker push fpco/haskell-scratch:integer-simple
-	@docker tag -f haskell-scratch:integer-simple fpco/haskell-scratch:latest
-	@docker push fpco/haskell-scratch:latest
-
-.PHONY: default docker-integer-gmp docker-integer-simple clean push
+.PHONY: default docker-integer-gmp docker-integer-simple clean
